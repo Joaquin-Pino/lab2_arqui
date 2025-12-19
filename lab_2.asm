@@ -42,9 +42,9 @@ recibir_elementos:
     addi $t0, $t0, 1 #aumentar contador
     j recibir_elementos #otro ciclo
 
-
 copiar:
-	#copiamos el arreglo recibido a la direccion de salida 0x10010080 y trabajaremos sobre este
+	#copiamos el arreglo recibido a la direccion de salida 0x10010080 y trabajaremos sobre con esta direccion
+	# para preservar el arreglo original y mostrar 
 	li $t0, 0 #reiniciar contador
 	la $t1, 0x10010000 #cargar direccion de memoria para la entrada
 	la $t2, 0x10010080 #cargar direccion de memoria para la salida
